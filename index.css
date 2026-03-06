@@ -1,30 +1,22 @@
-/* =========================================================
-   index.css — Option B: Neutral Blue (USWDS-like minimal)
-   ========================================================= */
-
 :root {
   --bg: #1a232c;
   --bg-elev: rgba(26, 35, 44, 0.88);
   --page-text: rgba(247, 248, 250, 0.92);
 
   --panel: #f7f5f0;
-  --panel-2: #efece4;
   --text: #17212b;
   --muted: #465564;
 
   --accent: #2b5d7d;
-  --accent-2: #244c66;
   --title-text: #ffffff;
 
   --link: #1f4e8c;
   --link-hover: #2b5d7d;
 
   --border: rgba(23, 33, 43, 0.18);
-  --border-strong: rgba(23, 33, 43, 0.28);
   --shadow: 0 10px 26px rgba(0, 0, 0, 0.20);
 
   --radius: 12px;
-  --radius-sm: 10px;
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
@@ -84,7 +76,7 @@ section { margin-bottom: 20px; }
   color: var(--page-text);
 }
 
-/* Desktop icon strip preserved */
+/* Desktop container kept; you will add image buttons later */
 #desktop-container {
   display: flex; flex-direction: row; gap: 40px;
   position: absolute; left: 0; width: 100%;
@@ -107,15 +99,13 @@ section { margin-bottom: 20px; }
   gap: 6px;
 }
 
-/* NEW: inline SVG icon sizing + coloring */
-.app .icon {
-  width: 24px;
-  height: 24px;
+.app img {
+  width: 100%;
+  max-width: 40px;
+  height: auto;
   display: block;
-  color: currentColor; /* explicit */
+  object-fit: contain;
 }
-
-.app:hover { color: rgba(247, 248, 250, 1); }
 
 /* Windows */
 .window {
@@ -134,13 +124,25 @@ section { margin-bottom: 20px; }
   color: var(--title-text);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   font-weight: 750;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 .content { padding: 12px; color: var(--text); background: var(--panel); }
-.subtitle { color: rgba(23, 33, 43, 0.62); font-weight: 700; }
 
-#pfp { float: right; margin: 4px; border: 1px solid var(--border); border-radius: 10px; background: rgba(23, 33, 43, 0.03); }
+.subtitle {
+  color: rgba(23, 33, 43, 0.62);
+  font-weight: 700;
+}
+
+#pfp {
+  float: right;
+  margin: 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(23, 33, 43, 0.03);
+}
+
 .border { border: 1px solid var(--border); border-radius: 12px; }
 
 .button, button.button {
@@ -176,7 +178,13 @@ section { margin-bottom: 20px; }
 
 .marquee img { opacity: var(--marquee-opacity); }
 
-/* Footer/taskbar preserved */
+.badge {
+  height: 32px;
+  width: auto;
+  vertical-align: middle;
+  image-rendering: auto;
+}
+
 footer {
   position: fixed; left: 0; bottom: 0;
   width: calc(100% - 8px); height: 32px;
@@ -204,6 +212,7 @@ footer {
   #desktop-container { position: initial; width: initial; }
   #home-content { flex-direction: column; gap: 0; }
 }
+
 @media (max-width: 960px) {
   main { -webkit-flex-direction: column; flex-direction: column; align-items: center; justify-content: center; }
   .middle { width: 95%; }
@@ -212,6 +221,7 @@ footer {
   .desktop { justify-content: flex-start !important; }
   #home-content { flex-direction: row; gap: 8px; }
 }
+
 @media (max-width: 550px) {
   #home-content { flex-direction: column; gap: 0; }
 }
