@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Hunter Browning — Mixed-Signal Embedded Hardware Design Engineer</title>
+  <title>Hunter Browning</title>
 
   <link href="index.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -292,5 +292,62 @@
       <div class="site-date">2026-03-02</div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const marquee = document.getElementById("footerBadgeMarquee");
+      if (!marquee) return;
+
+      const badgePool = [
+        actuallyUsedAIForMostOfThisWebsiteSorry.gif,
+        anythingButChrome.gif,
+        bandwidth.gif,
+        banTimeTravel.png,
+        bookmark.png,
+        drpepper.gif,
+        firefox.png,
+        gimp.gif,
+        gmail.gif,
+        godot.png,
+        hatesquarespace.png,
+        html.gif,
+        notepad.gif,
+        png.png,
+        pootergood.png,
+        possoms.png,
+        powerlevel.jpg,
+        superiorAudioQuality.gif,
+        underConstruction.gif,
+        w7.gif,
+        windows.png,
+        winrar.gif,
+        www.gif,
+        xkcd.gif,
+        xp.gif,
+        youtube.gif
+      ];
+
+      const pickCount = 10;
+      if (!badgePool.length) return;
+
+      const picks = [];
+      const used = new Set();
+
+      const max = Math.min(pickCount, badgePool.length);
+      while (picks.length < max) {
+        const idx = Math.floor(Math.random() * badgePool.length);
+        if (used.has(idx)) continue;
+        used.add(idx);
+        picks.push(badgePool[idx]);
+      }
+
+      for (const file of picks) {
+        const img = document.createElement("img");
+        img.className = "badge";
+        img.alt = "";
+        img.src = "../assets/badges/" + file;
+        marquee.appendChild(img);
+      }
+    })();
+  </script>
 </body>
 </html>
