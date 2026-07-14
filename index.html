@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -31,7 +31,7 @@
     </div>
 
     <nav id="shortcut-nav" aria-label="Primary navigation">
-      <div class="shortcut-cluster shortcut-cluster-left" aria-label="Portfolio navigation">
+      <div class="shortcut-cluster shortcut-cluster-left" role="group" aria-label="Portfolio navigation">
         <a class="shortcut shortcut-projects" href="#featured-projects" aria-label="Projects">
           <img src="assets/images/icons/PROJECTS.svg" alt="" aria-hidden="true" />
           Projects
@@ -46,7 +46,7 @@
         </a>
       </div>
 
-      <div class="shortcut-cluster shortcut-cluster-right" aria-label="External navigation">
+      <div class="shortcut-cluster shortcut-cluster-right" role="group" aria-label="External navigation">
         <a class="shortcut shortcut-resume" href="assets/docs/Resume-NO-PI.pdf" aria-label="Resume PDF">
           <img src="assets/images/icons/RESUME.svg" alt="" aria-hidden="true" />
           Resume
@@ -120,7 +120,7 @@
             <div class="badge-card">
               <img src="assets/images/icons/YOUTUBE.svg" alt="" aria-hidden="true" class="badge-card-icon" />
               <span>
-                <a href="#"><strong>YouTube</strong></a>
+                <strong>YouTube</strong>
                 <span class="muted">TBA for short tech notes, demos, etc.</span>
               </span>
             </div>
@@ -152,15 +152,15 @@
           <div class="title"><span>FEATURED PROJECTS</span></div>
           <div class="content preview-list">
             <article class="preview-item">
-              <h2><a href="post/project-templates/full-project.html">Lorem Ipsum Project One</a></h2>
+              <h2><a href="blog/project-templates/full-project.html">Lorem Ipsum Project One</a></h2>
               <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae nibh sed lorem facilisis cursus.</p>
             </article>
             <article class="preview-item">
-              <h2><a href="post/project-templates/full-project.html">Lorem Ipsum Project Two</a></h2>
+              <h2><a href="blog/project-templates/full-project.html">Lorem Ipsum Project Two</a></h2>
               <p class="muted">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </article>
             <article class="preview-item">
-              <h2><a href="post/project-templates/full-project.html">Lorem Ipsum Project Three</a></h2>
+              <h2><a href="blog/project-templates/full-project.html">Lorem Ipsum Project Three</a></h2>
               <p class="muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </article>
           </div>
@@ -184,18 +184,46 @@
       <section id="blog">
         <div class="window">
           <div class="title"><span>BLOG</span></div>
-          <div class="content preview-list">
-            <article class="preview-item">
-              <h2><a href="post/project-templates/technical-post.html">Lorem Ipsum Post One</a></h2>
-              <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus.</p>
+          <div class="content blog-directory scroll-panel">
+            <article class="blog-directory-item">
+              <div class="blog-directory-marker">
+                <div class="blog-directory-meta"><span>Tech</span></div>
+                <img class="blog-directory-icon" src="assets/favicon/HX.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="blog-directory-copy">
+                <h2><a href="blog/project-templates/technical-post.html">Lorem Ipsum Post One</a></h2>
+                <p class="muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus.</p>
+              </div>
             </article>
-            <article class="preview-item">
-              <h2><a href="post/project-templates/technical-post.html">Lorem Ipsum Post Two</a></h2>
-              <p class="muted">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus.</p>
+            <article class="blog-directory-item">
+              <div class="blog-directory-marker">
+                <div class="blog-directory-meta"><span>Tech</span></div>
+                <img class="blog-directory-icon" src="assets/favicon/HX.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="blog-directory-copy">
+                <h2><a href="blog/project-templates/technical-post.html">Lorem Ipsum Post Two</a></h2>
+                <p class="muted">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus.</p>
+              </div>
             </article>
-            <article class="preview-item">
-              <h2><a href="post/project-templates/basic-post.html">Lorem Ipsum Post Three</a></h2>
-              <p class="muted">Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+            <article class="blog-directory-item">
+              <div class="blog-directory-marker">
+                <div class="blog-directory-meta"><span>Short</span></div>
+                <img class="blog-directory-icon" src="assets/favicon/HX.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="blog-directory-copy">
+                <h2><a href="blog/project-templates/basic-post.html">Lorem Ipsum Post Three</a></h2>
+                <p class="muted">Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor.</p>
+              </div>
+            </article>
+            <article class="blog-directory-item">
+              <div class="blog-directory-marker">
+                <div class="blog-directory-meta"><span>Project</span></div>
+                <img class="blog-directory-icon" src="assets/favicon/HX.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="blog-directory-copy">
+                <h2><a href="blog/project-templates/full-project.html">Lorem Ipsum Post Four</a></h2>
+                <p class="muted">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis.</p>
+              </div>
             </article>
           </div>
         </div>
@@ -283,9 +311,7 @@
   <!-- Footer -->
   <footer>
     <div id="taskbar">
-      <a href="index.html">
-        <button class="button" type="button">HOME</button>
-      </a>
+      <a class="button" href="index.html">HOME</a>
 
       <div class="vl" aria-hidden="true"></div>
 
@@ -354,8 +380,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
