@@ -1,0 +1,5 @@
+# Local markdown working drafts in /blog
+*.md
+
+# Keep markdown templates under version control
+!post-templates/*.md
