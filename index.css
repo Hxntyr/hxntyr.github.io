@@ -442,7 +442,7 @@ footer {
   background: rgba(247, 248, 250, 0.06);
 }
 
-/* Post template */
+/* Post pages */
 .post-page header {
   width: min(100% - (2 * var(--page-gutter)), 960px);
   flex-direction: column;
